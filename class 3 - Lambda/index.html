@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body><div align="center"><br><br><br><br>
+<h1><text style="color: red;">Hello</text> <span id="my-demo">Cloud services students!</span></h1>
+<button onclick="myFunction()">Click me</button><br>
+<br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy7q51er1wwhnkRL6s03-7za3vW_DGkOnIbg&s"></div>
+<script>
+
+function myFunction() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+    		if (this.readyState == 4 && this.status == 200) {
+    			document.getElementById("my-demo").innerHTML = this.responseText;
+    		}
+	};
+	xhttp.open("GET", "https://33j3z5y4z8.execute-api.eu-central-1.amazonaws.com/default/", true);
+	xhttp.send();
+
+}
+
+</script>
+</body>
+</html>
